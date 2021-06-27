@@ -155,18 +155,26 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Trước"
+                android:text="&lt;&lt;"
                 android:backgroundTint="#cc0000"
                 android:textColor="@color/white"
+                android:textSize="30sp" />
+            <Button
+                android:id="@+id/bt_NopBai"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="Nộp bài"
+                android:backgroundTint="#ECDE0B"
+                android:textColor="@color/white"
                 android:textSize="15sp" />
-
             <Button
                 android:id="@+id/bt_Sau"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Sau"
-                android:textSize="15sp"
+                android:text="&gt;&gt;"
+                android:textSize="30sp"
                 android:backgroundTint="#cc0000"
                 android:textColor="@color/white"/>
 

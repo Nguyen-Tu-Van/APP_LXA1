@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.example.app_lxa1.models.Answer
@@ -40,6 +41,7 @@ class thisathach : AppCompatActivity() ,View.OnClickListener{
         setDataQuestion(mListQuestion!![currentQuetion])
         val bt_prev = findViewById<Button>(R.id.bt_Truoc)
         val bt_next = findViewById<Button>(R.id.bt_Sau)
+        val bt_Nop = findViewById<Button>(R.id.bt_NopBai)
         bt_next.setOnClickListener{
             currentQuetion++
             Handler().postDelayed({ setDataQuestion(mListQuestion!![currentQuetion]) }, 1200)
@@ -47,6 +49,9 @@ class thisathach : AppCompatActivity() ,View.OnClickListener{
         bt_prev.setOnClickListener{
             currentQuetion--
             Handler().postDelayed({ setDataQuestion(mListQuestion!![currentQuetion]) }, 1200)
+        }
+        bt_Nop.setOnClickListener{
+            showDialogSubmit("THời gian làm bài thi vẫn còn . Bạn có chắc chắn muốn nộp bài thi không?")
         }
     }
     fun time_thi()
@@ -80,8 +85,9 @@ class thisathach : AppCompatActivity() ,View.OnClickListener{
         }
         toolbar.setNavigationOnClickListener(
             View.OnClickListener
-            { var intent = Intent(this,MainActivity::class.java)
-                startActivity(intent) }
+            {
+                showDialogBack("Bạn có muốn quay lại , bài thi sẽ không được chấm điểm")
+            }
         )
     }
     private fun initUi() {
@@ -167,6 +173,46 @@ class thisathach : AppCompatActivity() ,View.OnClickListener{
             }
 
         }
+    }
+
+    private fun showDialogBack(message: String) {
+        val builder = AlertDialog.Builder(this)
+        builder.setMessage(message)
+        //dieu khien bam ra ngoai ta dialog
+        //neu nhu muon ko
+        builder.setCancelable(false) //click ra ben ngoai k tat dialog
+
+        //click nut yes ,xu li ntn
+        builder.setNegativeButton("Quay lại") { dialog, which ->
+            var intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+            dialog.dismiss() //tat dialog
+        }.setPositiveButton("Tiếp tục thi") { dialog, which ->
+            dialog.dismiss() //tat dialog
+        }
+        //showdialog
+        val alertDialog = builder.create()
+        alertDialog.show()
+    }
+
+    private fun showDialogSubmit(message: String) {
+        val builder = AlertDialog.Builder(this)
+        builder.setMessage(message)
+        //dieu khien bam ra ngoai ta dialog
+        //neu nhu muon ko
+        builder.setCancelable(false) //click ra ben ngoai k tat dialog
+
+        //click nut yes ,xu li ntn
+        builder.setPositiveButton("Nộp bài thi") { dialog, which ->
+            var intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+            dialog.dismiss() //tat dialog
+        }.setNegativeButton("Kiểm tra lại") { dialog, which ->
+            dialog.dismiss() //tat dialog
+        }
+        //showdialog
+        val alertDialog = builder.create()
+        alertDialog.show()
     }
 
 
