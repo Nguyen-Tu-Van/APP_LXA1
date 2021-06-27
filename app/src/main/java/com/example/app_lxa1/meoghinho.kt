@@ -1,15 +1,17 @@
 package com.example.app_lxa1
 
 import android.content.Context
-import android.support.v7.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.ImageView
 import android.widget.ListView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+
 
 class meoghinho : AppCompatActivity() {
     var listView: ListView? = null
@@ -29,10 +31,22 @@ class meoghinho : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_meoghinho)
 
+        val toolbar: Toolbar = findViewById<View>(R.id.toolbarMeo) as Toolbar
+        setSupportActionBar(toolbar)
+        if (supportActionBar != null) {
+            supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+            supportActionBar!!.setDisplayShowHomeEnabled(true)
+        }
+        toolbar.setNavigationOnClickListener(View.OnClickListener
+        { var intent = Intent(this,MainActivity::class.java)
+            startActivity(intent) }
+        )
+
         listView = findViewById(R.id.listViewMeoGhiNho)
         val adapter: meoghinho.MyAdapter = MyAdapter(this, mcontent)
         listView!!.adapter = adapter
     }
+
     internal inner class MyAdapter(
         context1: Context,
         var rContent: Array<String>

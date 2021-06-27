@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "39791312706",
+    "project_id": "app-lxa1",
+    "storage_bucket": "app-lxa1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39791312706:android:9fd630672074f3a74b12db",
+        "android_client_info": {
+          "package_name": "com.example.app_lxa1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39791312706-chfihc3tvd984r6nvuumpv3hvnjg5c3u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVquTecpFpvxBC3VIMxbo6t-ynS19d6oE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39791312706-chfihc3tvd984r6nvuumpv3hvnjg5c3u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

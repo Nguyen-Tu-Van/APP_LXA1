@@ -1,12 +1,14 @@
 package com.example.app_lxa1
 
 import android.content.Context
-import android.support.v7.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 
 class bienbaogt : AppCompatActivity() {
     var listView: ListView? = null
@@ -34,8 +36,19 @@ class bienbaogt : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bienbaogt)
+
+        val toolbar: Toolbar = findViewById<View>(R.id.toolbarBienBao) as Toolbar
+        setSupportActionBar(toolbar)
+        if (supportActionBar != null) {
+            supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+            supportActionBar!!.setDisplayShowHomeEnabled(true)
+        }
+        toolbar.setNavigationOnClickListener(View.OnClickListener
+        { var intent = Intent(this,MainActivity::class.java)
+            startActivity(intent) }
+        )
+
         listView = findViewById(R.id.listView2)
-        //
         val adapter: MyAdapter = MyAdapter(this, mTitle, mDescription, images)
         listView!!.adapter = adapter
 
