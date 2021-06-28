@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         val tracuu = findViewById<ImageButton>(R.id.bt_traCuu)
 
         thi.setOnClickListener{
-            var intent = Intent(this,thisathach::class.java)
+            var intent = Intent(this,dethi::class.java)
             startActivity(intent)
         }
         bienbao.setOnClickListener{
@@ -36,14 +36,7 @@ class MainActivity : AppCompatActivity() {
             var intent = Intent(this,meoghinho::class.java)
             startActivity(intent)
         }
-        lythuyet.setOnClickListener{
-            var intent = Intent(this,thisathach2::class.java)
-            startActivity(intent)
-        }
-        tracuu.setOnClickListener{
-            var intent = Intent(this,ketquathi::class.java)
-            startActivity(intent)
-        }
+
 
     }
 }

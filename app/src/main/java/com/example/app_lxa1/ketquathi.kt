@@ -18,7 +18,7 @@ class ketquathi : AppCompatActivity() {
         var intent = intent
         var score = intent.getStringExtra("score")
         var ketqua = findViewById<TextView>(R.id.textviewSoCauDung)
-        if(score.toString().toInt() >=3) img_ketqua.setImageDrawable(getDrawable(R.drawable.dado))
+        if(score.toString().toInt() >=16) img_ketqua.setImageDrawable(getDrawable(R.drawable.dado))
         else img_ketqua.setImageDrawable(getDrawable(R.drawable.datruot))
         ketqua.text = score+"/20"
 
@@ -29,7 +29,7 @@ class ketquathi : AppCompatActivity() {
             startActivity(intent)
         }
         quayve.setOnClickListener {
-            var intent = Intent(this,MainActivity::class.java)
+            var intent = Intent(this,dethi::class.java)
             startActivity(intent)
         }
     }

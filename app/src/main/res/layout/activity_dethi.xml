@@ -5,5 +5,405 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".dethi">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarMeo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_200"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            >
+            <TextView
+                android:id="@+id/textview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chọn bộ đề thi"
+                android:textColor="#FFF"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                />
+        </androidx.appcompat.widget.Toolbar>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="1"
+                        android:textSize="23dp"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_maudo_corner_30">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:textSize="23dp"
+                        android:text="Bộ đề thứ nhất"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"></TextView>
+                    <Button
+                        android:id="@+id/bt_de1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@drawable/bg_xanhnhat_corner_30"
+                        android:text="Làm bài &gt;&gt;"
+                        android:textColor="@color/white">
+
+                    </Button>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black">
+
+                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="2"
+                        android:textSize="23dp"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_maudo_corner_30">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:textSize="23dp"
+                        android:text="Bộ đề thứ hai"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"></TextView>
+                    <Button
+                        android:id="@+id/bt_de2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@drawable/bg_xanhnhat_corner_30"
+                        android:text="Làm bài &gt;&gt;"
+                        android:textColor="@color/white">
+
+                    </Button>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black">
+
+                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="3"
+                        android:textSize="23dp"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_maudo_corner_30">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:textSize="23dp"
+                        android:text="Bộ đề thứ ba"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"></TextView>
+                    <Button
+                        android:id="@+id/bt_de3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@drawable/bg_xanhnhat_corner_30"
+                        android:text="Làm bài &gt;&gt;"
+                        android:textColor="@color/white">
+
+                    </Button>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black">
+
+                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="4"
+                        android:textSize="23dp"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_maudo_corner_30">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:textSize="23dp"
+                        android:text="Bộ đề thứ tư"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"></TextView>
+                    <Button
+                        android:id="@+id/bt_de4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@drawable/bg_xanhnhat_corner_30"
+                        android:text="Làm bài &gt;&gt;"
+                        android:textColor="@color/white">
+
+                    </Button>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black">
+
+                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="5"
+                        android:textSize="23dp"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_maudo_corner_30">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:textSize="23dp"
+                        android:text="Bộ đề thứ năm"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"></TextView>
+                    <Button
+                        android:id="@+id/bt_de5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@drawable/bg_xanhnhat_corner_30"
+                        android:text="Làm bài &gt;&gt;"
+                        android:textColor="@color/white">
+
+                    </Button>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black">
+
+                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="6"
+                        android:textSize="23dp"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_maudo_corner_30">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:textSize="23dp"
+                        android:text="Bộ đề thứ sáu"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"></TextView>
+                    <Button
+                        android:id="@+id/bt_de6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@drawable/bg_xanhnhat_corner_30"
+                        android:text="Làm bài &gt;&gt;"
+                        android:textColor="@color/white">
+
+                    </Button>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black">
+
+                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="7"
+                        android:textSize="23dp"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_maudo_corner_30">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:textSize="23dp"
+                        android:text="Bộ đề thứ bảy"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"></TextView>
+                    <Button
+                        android:id="@+id/bt_de7"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@drawable/bg_xanhnhat_corner_30"
+                        android:text="Làm bài &gt;&gt;"
+                        android:textColor="@color/white">
+
+                    </Button>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black">
+
+                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="8"
+                        android:textSize="23dp"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_maudo_corner_30">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:textSize="23dp"
+                        android:text="Bộ đề thứ tám"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"></TextView>
+                    <Button
+                        android:id="@+id/bt_de8"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@drawable/bg_xanhnhat_corner_30"
+                        android:text="Làm bài &gt;&gt;"
+                        android:textColor="@color/white">
+
+                    </Button>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
