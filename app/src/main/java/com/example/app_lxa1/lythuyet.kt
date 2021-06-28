@@ -29,7 +29,7 @@ class lythuyet : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lythuyet)
-        val toolbar: Toolbar = findViewById<View>(R.id.toolbarMeo) as Toolbar
+        val toolbar: Toolbar = findViewById<View>(R.id.toolbarLyThuet) as Toolbar
         setSupportActionBar(toolbar)
         if (supportActionBar != null) {
             supportActionBar!!.setDisplayHomeAsUpEnabled(true)

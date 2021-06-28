@@ -11,19 +11,19 @@
         android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar2"
+            android:id="@+id/toolbarLyThuet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/teal_200"
             android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             >
             <TextView
                 android:id="@+id/textview1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Lý th"
+                android:text="Lý thuyết"
                 android:textColor="#FFF"
                 android:textSize="30sp"
                 android:textStyle="bold"
