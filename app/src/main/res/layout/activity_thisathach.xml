@@ -96,50 +96,56 @@
                         android:layout_height="1dp"
                         android:background="@color/black">
                     </TextView>
-                    <CheckBox
-                        android:id="@+id/checkboxA"
+                    <RadioGroup
+                        android:id="@+id/bt_group"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:background="@color/white"
-                        android:text="A. Chỉ được thực hiện nếu đã hướng dẫn đầy đủ"
-                        android:textSize="18dp">
+                        android:layout_height="wrap_content">
+                        <RadioButton
+                            android:id="@+id/checkboxA"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@color/white"
+                            android:text="A. Chỉ được thực hiện nếu đã hướng dẫn đầy đủ"
+                            android:textSize="18dp">
 
-                    </CheckBox>
-                    <CheckBox
-                        android:id="@+id/checkboxB"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:text="B. Không được phép"
-                        android:background="@color/white"
-                        android:textSize="18dp">
+                        </RadioButton>
+                        <RadioButton
+                            android:id="@+id/checkboxB"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="B. Không được phép"
+                            android:background="@color/white"
+                            android:textSize="18dp">
 
-                    </CheckBox>
-                    <CheckBox
-                        android:id="@+id/checkboxC"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:background="@color/white"
-                        android:text="C. Được phép tùy từng trường hợp"
-                        android:textSize="18dp">
+                        </RadioButton>
+                        <RadioButton
+                            android:id="@+id/checkboxC"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@color/white"
+                            android:text="C. Được phép tùy từng trường hợp"
+                            android:textSize="18dp">
 
-                    </CheckBox>
-                    <CheckBox
-                        android:id="@+id/checkboxD"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:background="@color/white"
-                        android:text="D. Chỉ được phép thực hiện với thành viên trong gia đình"
-                        android:textSize="18dp">
+                        </RadioButton>
+                        <RadioButton
+                            android:id="@+id/checkboxD"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@color/white"
+                            android:text="D. Chỉ được phép thực hiện với thành viên trong gia đình"
+                            android:textSize="18dp">
 
-                    </CheckBox>
+                        </RadioButton>
+                    </RadioGroup>
+
                 </LinearLayout>
             </ScrollView>
         </LinearLayout>
@@ -165,9 +171,10 @@
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:text="Nộp bài"
-                android:backgroundTint="#ECDE0B"
+                android:backgroundTint="#ff9600"
+                android:textStyle="bold"
                 android:textColor="@color/white"
-                android:textSize="15sp" />
+                android:textSize="23sp" />
             <Button
                 android:id="@+id/bt_Sau"
                 android:layout_width="0dp"
