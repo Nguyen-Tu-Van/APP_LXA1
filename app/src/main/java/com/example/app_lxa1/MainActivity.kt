@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         val bienbao = findViewById<ImageButton>(R.id.bt_bienBao)
         val meo = findViewById<ImageButton>(R.id.bt_meo)
         val thi = findViewById<ImageButton>(R.id.bt_thiSatHach)
-        val lythuyet = findViewById<ImageButton>(R.id.bt_lyThuyet)
+        val lyth = findViewById<ImageButton>(R.id.bt_lyThuyet)
         val tracuu = findViewById<ImageButton>(R.id.bt_traCuu)
 
         thi.setOnClickListener{
@@ -36,7 +36,9 @@ class MainActivity : AppCompatActivity() {
             var intent = Intent(this,meoghinho::class.java)
             startActivity(intent)
         }
-
-
+        lyth.setOnClickListener{
+            var intent = Intent(this,lythuyet::class.java)
+            startActivity(intent)
+        }
     }
 }
