@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.APP_LXA1">
-        <activity android:name=".lythuyet"></activity>
+        <activity android:name=".xemlaiketqua"></activity>
+        <activity android:name=".lythuyet" />
         <activity android:name=".dethi" />
         <activity android:name=".ketquathi" />
         <activity android:name=".thisathach2" />
