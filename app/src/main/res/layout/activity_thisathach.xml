@@ -91,6 +91,15 @@
                         android:textColor="#003300"
                         android:padding="5dp"
                         ></TextView>
+                    <ImageView
+                        android:id="@+id/image_thisathach"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/img6"
+                        android:paddingBottom="3dp">
+
+                    </ImageView>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="1dp"

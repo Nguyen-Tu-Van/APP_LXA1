@@ -6,7 +6,6 @@ import android.graphics.Color
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.os.Handler
-import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
@@ -19,6 +18,7 @@ import com.example.app_lxa1.models.Question
 class thisathach : AppCompatActivity() ,View.OnClickListener{
     private var tvQuestion: TextView? = null
     private var tvContentQuestion: TextView? = null
+    private var tvImage: ImageView? = null
     private var tvAnswer1: RadioButton? = null
     private var tvAnswer2:RadioButton? = null
     private var tvAnswer3:RadioButton? = null
@@ -81,7 +81,7 @@ class thisathach : AppCompatActivity() ,View.OnClickListener{
             }
         }
         bt_Nop.setOnClickListener{
-            showDialogSubmit("THời gian làm bài thi vẫn còn . Bạn có chắc chắn muốn nộp bài thi không?")
+            showDialogSubmit("Thời gian làm bài thi vẫn còn . Bạn có chắc chắn muốn nộp bài thi không?")
         }
     }
     fun time_thi()
@@ -128,6 +128,7 @@ class thisathach : AppCompatActivity() ,View.OnClickListener{
     private fun initUi() {
         tvQuestion = findViewById(R.id.question)
         tvContentQuestion = findViewById(R.id.content_question)
+        tvImage = findViewById(R.id.image_thisathach)
         tvAnswer1 = findViewById(R.id.checkboxA)
         tvAnswer2 = findViewById(R.id.checkboxB)
         tvAnswer3 = findViewById(R.id.checkboxC)
@@ -170,6 +171,8 @@ class thisathach : AppCompatActivity() ,View.OnClickListener{
         val titleQuestion = "Câu " + question.number + "/20"
         tvQuestion!!.text = titleQuestion
         tvContentQuestion!!.text = question.content
+        if(question.image == 0) tvImage!!.setImageDrawable(getResources().getDrawable(R.drawable.img0))
+        else tvImage!!.setImageDrawable(getResources().getDrawable(question.image))
         tvAnswer1!!.text = question.getListAnswer()[0].content
         tvAnswer2!!.text = question.getListAnswer()[1].content
         tvAnswer3!!.text = question.getListAnswer()[2].content
@@ -287,26 +290,26 @@ class thisathach : AppCompatActivity() ,View.OnClickListener{
         answerList20.add(Answer("Biển 3.", false))
         answerList20.add(Answer("Biển 2 và 3.", true))
 
-        list.add(Question(1, "Phần của đường bộ được sử dụng cho các phương tiện giao thông qua lại là gì ?", answerList1))
-        list.add(Question(2, "“Phương tiện tham gia giao thông đường bộ” gồm những loại nào ?", answerList2))
-        list.add(Question(3, "Sử dụng rượu bia khi lái xe, nếu bị phát hiện thì bị xử lý như thế nào ?", answerList3))
-        list.add(Question(4, "Bạn đang lái xe phía trước có một xe cứu thương đang phát tín hiệu ưu tiên bạn có được phép vượt hay không?", answerList4))
-        list.add(Question(5, "Hành vi sử dụng xe mô tô để kéo, đẩy xe mô tô khác bị hết xăng đến trạm mua xăng có được phép hay không ?", answerList5))
-        list.add(Question(6, "Biển báo hiệu hình tròn có nền xanh lam có hình vẽ màu trắng là loại biển gì dưới đây?", answerList6))
-        list.add(Question(7, "Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?", answerList7))
-        list.add(Question(8, "Người điều khiển phương tiện tham gia giao thông trong hầm đường bộ ngoài việc phải tuân thủ các quy tắc giao thông còn phải thực hiện những quy định nào dưới đây ?", answerList8))
-        list.add(Question(9, "Trên đoạn đường hai chiều không có giải phân cách giữa, người lái xe không được vượt xe khác trong các trường hợp nào dưới đây?", answerList9))
-        list.add(Question(10, "Khi điều khiển xe chạy với tốc độ dưới 60 km/h, để đảm bảo khoảng cách an toàn giữa hai xe, người lái xe phải điều khiển xe như thế nào ?", answerList10))
-        list.add(Question(11, "Để báo hiệu cho xe phía trước biết xe mô tô của bạn muốn vượt, bạn phải có tín hiệu như thế nào dưới đây ?", answerList11))
-        list.add(Question(12, "Khi điều khiển xe mô tô tay ga xuống đường dốc dài, độ dốc cao, người lái xe cần thực hiện các thao tác nào dưới đây để đảm bảo an toàn ?", answerList12))
-        list.add(Question(13, "Tay ga trên xe mô tô hai bánh có tác dụng gì trong các trường hợp dưới đây ?", answerList13))
-        list.add(Question(14, "Biển nào cấm xe rẽ trái ?", answerList14))
-        list.add(Question(15, "Biển nào dưới đây các phương tiện không được phép đi vào ?", answerList15))
-        list.add(Question(16, "Biển nào xe mô tô hai bánh không được đi vào ?", answerList16))
-        list.add(Question(17, "Biển nào báo hiệu nguy hiểm giao nhau với đường sắt ?", answerList17))
-        list.add(Question(18, "Biển nào báo hiệu “Đường giao nhau” của các tuyến đường cùng cấp ?", answerList18))
-        list.add(Question(19, "Biển nào chỉ dẫn nơi bắt đầu đoạn đường dành cho người đi bộ ?", answerList19))
-        list.add(Question(20, "Biển nào dưới đây báo hiệu hết cấm vượt ?", answerList20))
+        list.add(Question(1, "Phần của đường bộ được sử dụng cho các phương tiện giao thông qua lại là gì ?", answerList1,0))
+        list.add(Question(2, "“Phương tiện tham gia giao thông đường bộ” gồm những loại nào ?", answerList2,0))
+        list.add(Question(3, "Sử dụng rượu bia khi lái xe, nếu bị phát hiện thì bị xử lý như thế nào ?", answerList3,R.drawable.img1))
+        list.add(Question(4, "Bạn đang lái xe phía trước có một xe cứu thương đang phát tín hiệu ưu tiên bạn có được phép vượt hay không?", answerList4,0))
+        list.add(Question(5, "Hành vi sử dụng xe mô tô để kéo, đẩy xe mô tô khác bị hết xăng đến trạm mua xăng có được phép hay không ?", answerList5,R.drawable.img2))
+        list.add(Question(6, "Biển báo hiệu hình tròn có nền xanh lam có hình vẽ màu trắng là loại biển gì dưới đây?", answerList6,R.drawable.img3))
+        list.add(Question(7, "Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?", answerList7,0))
+        list.add(Question(8, "Người điều khiển phương tiện tham gia giao thông trong hầm đường bộ ngoài việc phải tuân thủ các quy tắc giao thông còn phải thực hiện những quy định nào dưới đây ?", answerList8,0))
+        list.add(Question(9, "Trên đoạn đường hai chiều không có giải phân cách giữa, người lái xe không được vượt xe khác trong các trường hợp nào dưới đây?", answerList9,0))
+        list.add(Question(10, "Khi điều khiển xe chạy với tốc độ dưới 60 km/h, để đảm bảo khoảng cách an toàn giữa hai xe, người lái xe phải điều khiển xe như thế nào ?", answerList10,0))
+        list.add(Question(11, "Để báo hiệu cho xe phía trước biết xe mô tô của bạn muốn vượt, bạn phải có tín hiệu như thế nào dưới đây ?", answerList11,0))
+        list.add(Question(12, "Khi điều khiển xe mô tô tay ga xuống đường dốc dài, độ dốc cao, người lái xe cần thực hiện các thao tác nào dưới đây để đảm bảo an toàn ?", answerList12,R.drawable.img4))
+        list.add(Question(13, "Tay ga trên xe mô tô hai bánh có tác dụng gì trong các trường hợp dưới đây ?", answerList13,0))
+        list.add(Question(14, "Biển nào cấm xe rẽ trái ?", answerList14,R.drawable.img5))
+        list.add(Question(15, "Biển nào dưới đây các phương tiện không được phép đi vào ?", answerList15,R.drawable.img6))
+        list.add(Question(16, "Biển nào xe mô tô hai bánh không được đi vào ?", answerList16,R.drawable.img7))
+        list.add(Question(17, "Biển nào báo hiệu nguy hiểm giao nhau với đường sắt ?", answerList17,R.drawable.img8))
+        list.add(Question(18, "Biển nào báo hiệu “Đường giao nhau” của các tuyến đường cùng cấp ?", answerList18,R.drawable.img9))
+        list.add(Question(19, "Biển nào chỉ dẫn nơi bắt đầu đoạn đường dành cho người đi bộ ?", answerList19,R.drawable.img10))
+        list.add(Question(20, "Biển nào dưới đây báo hiệu hết cấm vượt ?", answerList20,R.drawable.img11))
 
         return list
     }
@@ -376,33 +379,18 @@ class thisathach : AppCompatActivity() ,View.OnClickListener{
             else if(tvAnswer4!!.isChecked==true) list.set(currentQuetion,3)
             var score:Int = 0
             try {
-                if (mListQuestion!![0].getListAnswer()[list.get(0)].isCorrect == true) score++
-                if (mListQuestion!![1].getListAnswer()[list.get(1)].isCorrect == true) score++
-                if (mListQuestion!![2].getListAnswer()[list.get(2)].isCorrect == true) score++
-                if (mListQuestion!![3].getListAnswer()[list.get(3)].isCorrect == true) score++
-                if (mListQuestion!![4].getListAnswer()[list.get(4)].isCorrect == true) score++
-                if (mListQuestion!![5].getListAnswer()[list.get(5)].isCorrect == true) score++
-                if (mListQuestion!![6].getListAnswer()[list.get(6)].isCorrect == true) score++
-                if (mListQuestion!![7].getListAnswer()[list.get(7)].isCorrect == true) score++
-                if (mListQuestion!![8].getListAnswer()[list.get(8)].isCorrect == true) score++
-                if (mListQuestion!![9].getListAnswer()[list.get(9)].isCorrect == true) score++
-                if (mListQuestion!![10].getListAnswer()[list.get(10)].isCorrect == true) score++
-                if (mListQuestion!![11].getListAnswer()[list.get(11)].isCorrect == true) score++
-                if (mListQuestion!![12].getListAnswer()[list.get(12)].isCorrect == true) score++
-                if (mListQuestion!![13].getListAnswer()[list.get(13)].isCorrect == true) score++
-                if (mListQuestion!![14].getListAnswer()[list.get(14)].isCorrect == true) score++
-                if (mListQuestion!![15].getListAnswer()[list.get(15)].isCorrect == true) score++
-                if (mListQuestion!![16].getListAnswer()[list.get(16)].isCorrect == true) score++
-                if (mListQuestion!![17].getListAnswer()[list.get(17)].isCorrect == true) score++
-                if (mListQuestion!![18].getListAnswer()[list.get(18)].isCorrect == true) score++
-                if (mListQuestion!![19].getListAnswer()[list.get(19)].isCorrect == true) score++
-                if (mListQuestion!![20].getListAnswer()[list.get(20)].isCorrect == true) score++
+                for(i in 0..19)
+                {
+                    if (mListQuestion!![i].getListAnswer()[list.get(i)].isCorrect == true) score++
+                }
 
             } catch (e: Exception) {
 
             }
 
             intent.putExtra("score",score.toString())
+//            intent.putStringArrayListExtra("mListQuestion", mListQuestion as ArrayList<String>)
+//            intent.putIntegerArrayListExtra("list", list as ArrayList<Int>)
             startActivity(intent)
             dialog.dismiss() //tat dialog
         }.setNegativeButton("Kiểm tra lại") { dialog, which ->

@@ -1,7 +1,7 @@
 package com.example.app_lxa1.models
 
 
-class Question(var number: Int, var content: String, listAnswer: List<Answer>) {
+class Question(var number: Int, var content: String, listAnswer: List<Answer>, var image: Int) {
     private var listAnswer: List<Answer>
     fun getListAnswer(): List<Answer> {
         return listAnswer
