@@ -14,17 +14,20 @@ import androidx.appcompat.widget.Toolbar
 
 class lythuyet : AppCompatActivity() {
     var listView: ListView? = null
+    var mquestion = arrayOf(
+        "Câu 1",
+        "Câu 2",
+        "Câu 3"
+    )
     var mcontent = arrayOf(
-        "Với những câu hỏi có 3 đáp án và có đáp án dài + đáp án ngắn thì kinh nghiệm là đáp án nào ngắn đọc trước. Nếu đáp án đó sai thì chọn 2 đáp án dài còn lại. Và ngược lại…",
-        "Hỏi ở “trên cầu”, “trong đường hầm” có được quay đầu xe hay không? –>> Chọn đáp án “Không được quay đầu xe”, nhớ kỹ bất cứ trường hợp nào trong hầm hay trên cầu vượt cũng “không được phép quay đầu xe",
-        "Câu hỏi về VÒNG XUYẾN: Nếu “có báo hiệu đi theo vòng xuyến” nhường bên tay trái, “không có dấu hiệu đi theo vòng xuyến” nhường bên tay phải.",
-        "Các câu hỏi về CON SỐ: Các đáp án đúng 5m, 5 năm, 18 tuổi, 40 km/h, nhỏ hơn 70 km/h.",
-        "Câu hỏi về ĐÔNG DÂN CƯ: Đề bài không có số: chọn đáp án 2, đề bài có số: chọn đáp án có từ “xe gắn máy” ở cuối đáp án.",
-        "XE ưu tiên - thứ tự Hoả - Sự - Công - Thương",
-        "Nhất lộ: xe nào vào giao lộ được quyền đi trước",
-        "Câu hỏi về NỒNG ĐỘ CỒN: Mô tô: thì chọn đáp án 1. Ô tô: thì chọn đáp án 2.",
-        "Những câu hỏi có đáp án chứa các từ: “bị nghiêm cấm”, “không được”, “UBND cấp tỉnh”, “Cơ quan, tổ chức, cá nhân” thì mình chọn luôn đáp án đó.",
-        "Những câu hỏi liên quan đến khuân vác, vận chuyển chất gây hại, vật nặng: Chọn ngay đáp án “bị nghiêm cấm”."
+        "Phần của đường bộ được sử dụng cho các phương tiện giao thông qua lại là gì ?",
+        "“Phương tiện tham gia giao thông đường bộ” gồm những loại nào ?",
+        "Sử dụng rượu bia khi lái xe, nếu bị phát hiện thì bị xử lý như thế nào ?"
+    )
+    var manswer = arrayOf(
+        "Phần đường xe chạy.",
+        "Phương tiện giao thông cơ giới đường bộ & Phương tiện giao thông thô sơ đường bộ và xe máy chuyên dùng.",
+        "Bị xử phạt hành chính hoặc có thể bị xử lý hình sự tùy theo mức độ vi phạm."
     )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,14 +44,16 @@ class lythuyet : AppCompatActivity() {
             startActivity(intent) }
         )
         listView = findViewById(R.id.listViewLyThuyet)
-        val adapter: lythuyet.MyAdapter = MyAdapter(this, mcontent)
+        val adapter: lythuyet.MyAdapter = MyAdapter(this, mcontent,mquestion,manswer)
         listView!!.adapter = adapter
     }
     internal inner class MyAdapter(
         context1: Context,
-        var rContent: Array<String>
+        var rContent: Array<String>,
+        var rQuestion: Array<String>,
+        var rAnswer: Array<String>
     ) :
-        ArrayAdapter<String?>(context1, R.layout.row_lythuyet, R.id.texViewLyThuyet,rContent) {
+        ArrayAdapter<String?>(context1, R.layout.row_lythuyet, R.id.textViewLyThuyet,rContent) {
         override fun getView(
             position: Int,
             convertView: View?,
@@ -57,8 +62,13 @@ class lythuyet : AppCompatActivity() {
             val layoutInflater =
                 getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             val row: View = layoutInflater.inflate(R.layout.row_lythuyet, parent, false)
-            val myContent = row.findViewById<TextView>(R.id.texViewLyThuyet)
+            val myContent = row.findViewById<TextView>(R.id.textViewLyThuyet)
+            val myQuestion = row.findViewById<TextView>(R.id.textViewCauHoi)
+            val myAnswer = row.findViewById<TextView>(R.id.textViewDapan)
             myContent.text = rContent[position]
+            myQuestion.text = rQuestion[position]
+            myAnswer.text = rAnswer[position]
+
             return row
         }
     }

@@ -188,7 +188,7 @@ class thisathach : AppCompatActivity() ,View.OnClickListener{
         val list: MutableList<Question> = ArrayList()
         val answerList1: MutableList<Answer> = ArrayList<Answer>()
         answerList1.add(Answer("Phần mặt đường và lề đường.", false))
-        answerList1.add(Answer("Phần đường xe chạy..", true))
+        answerList1.add(Answer("Phần đường xe chạy.", true))
         answerList1.add(Answer("Phần đường xe cơ giới.", false))
         answerList1.add(Answer("", false))
         val answerList2: MutableList<Answer> = ArrayList<Answer>()

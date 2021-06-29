@@ -41,7 +41,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:paddingTop="20dp"
+                    android:paddingTop="10dp"
                     android:paddingBottom="20dp"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp">
@@ -79,9 +79,8 @@
                 </LinearLayout>
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/black">
-
+                    android:layout_height="4dp"
+                    android:background="@color/teal_200">
                 </TextView>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -125,9 +124,8 @@
                 </LinearLayout>
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/black">
-
+                    android:layout_height="4dp"
+                    android:background="@color/teal_200">
                 </TextView>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -171,9 +169,8 @@
                 </LinearLayout>
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/black">
-
+                    android:layout_height="4dp"
+                    android:background="@color/teal_200">
                 </TextView>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -217,9 +214,8 @@
                 </LinearLayout>
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/black">
-
+                    android:layout_height="4dp"
+                    android:background="@color/teal_200">
                 </TextView>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -263,9 +259,8 @@
                 </LinearLayout>
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/black">
-
+                    android:layout_height="4dp"
+                    android:background="@color/teal_200">
                 </TextView>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -309,9 +304,8 @@
                 </LinearLayout>
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/black">
-
+                    android:layout_height="4dp"
+                    android:background="@color/teal_200">
                 </TextView>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -355,9 +349,8 @@
                 </LinearLayout>
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/black">
-
+                    android:layout_height="4dp"
+                    android:background="@color/teal_200">
                 </TextView>
                 <LinearLayout
                     android:layout_width="match_parent"
