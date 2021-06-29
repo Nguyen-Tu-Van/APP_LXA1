@@ -52,6 +52,10 @@
                     android:layout_marginBottom="9dp"
                     android:textSize="19sp"
                     />
+                <ImageView
+                    android:id="@+id/imglythuyet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
