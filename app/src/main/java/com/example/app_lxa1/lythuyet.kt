@@ -35,7 +35,7 @@ class lythuyet : AppCompatActivity() {
         "Câu 17",
         "Câu 18",
         "Câu 19",
-        "Câu 20",
+        "Câu 20"
     )
     var mcontent = arrayOf(
         "Phần của đường bộ được sử dụng cho các phương tiện giao thông qua lại là gì ?",
@@ -57,8 +57,7 @@ class lythuyet : AppCompatActivity() {
         "Biển nào báo hiệu nguy hiểm giao nhau với đường sắt ?",
         "Biển nào báo hiệu “Đường giao nhau” của các tuyến đường cùng cấp ?",
         "Biển nào chỉ dẫn nơi bắt đầu đoạn đường dành cho người đi bộ ?",
-        "Biển nào dưới đây báo hiệu hết cấm vượt ?",
-
+        "Biển nào dưới đây báo hiệu hết cấm vượt ?"
 
     )
     var manswer = arrayOf(
@@ -81,7 +80,7 @@ class lythuyet : AppCompatActivity() {
         "Biển 1 và 3.",
         "Biển 1.",
         "Biển 2.",
-        " Biển 2 và 3.",
+        " Biển 2 và 3."
 
 
 
@@ -90,24 +89,24 @@ class lythuyet : AppCompatActivity() {
     var imglyth = intArrayOf(
         R.drawable.gone,
         R.drawable.gone,
+        R.drawable.img1,
+        R.drawable.gone,
+        R.drawable.img2,
+        R.drawable.img3,
         R.drawable.gone,
         R.drawable.gone,
         R.drawable.gone,
         R.drawable.gone,
         R.drawable.gone,
+        R.drawable.img4,
         R.drawable.gone,
-        R.drawable.gone,
-        R.drawable.gone,
-        R.drawable.gone,
-        R.drawable.gone,
-        R.drawable.gone,
-        R.drawable.gone,
-        R.drawable.gone,
-        R.drawable.duongcam,
-        R.drawable.dinguocchieu,
-        R.drawable.camoto,
-        R.drawable.camotoretrai,
-        R.drawable.lythuyet120
+        R.drawable.img5,
+        R.drawable.img6,
+        R.drawable.img7,
+        R.drawable.img8,
+        R.drawable.img9,
+        R.drawable.img10,
+        R.drawable.img11
     )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
