@@ -1,32 +1,41 @@
 package com.example.app_lxa1
 
 import android.content.Intent
+import android.media.AudioAttributes
+import android.media.AudioManager
+import android.media.SoundPool
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.app_lxa1.models.Question
 
 
 class ketquathi : AppCompatActivity() {
-    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
+    private var score:String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ketquathi)
+
         var img_ketqua = findViewById<ImageView>(R.id.image_ketqua)
         var intent = intent
-        var score = intent.getStringExtra("score")
+        score = intent.getStringExtra("score")
         var tvTime = intent.getStringExtra("tvTime")
         var ketqua = findViewById<TextView>(R.id.textviewSoCauDung)
         var thilai = findViewById<Button>(R.id.bt_thilai)
         var quayve = findViewById<Button>(R.id.bt_quayve)
         var xemlaikq = findViewById<Button>(R.id.bt_xemlaiketqua)
 
-        if(score.toString().toInt() >=16) img_ketqua.setImageDrawable(getDrawable(R.drawable.dado))
-        else img_ketqua.setImageDrawable(getDrawable(R.drawable.datruot))
+        if(score.toString().toInt() >=16) {
+              img_ketqua.setBackgroundResource(R.drawable.dado)
+        }
+        else {
+            img_ketqua.setBackgroundResource(R.drawable.datruot)
+        }
+
         ketqua.text = score+"/20"
 
         thilai.setOnClickListener {
@@ -51,7 +60,6 @@ class ketquathi : AppCompatActivity() {
             intent.putExtra("tvTime",tvTime)
             startActivity(intent)
         }
-
-
     }
+
 }

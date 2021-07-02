@@ -1,12 +1,11 @@
 package com.example.app_lxa1
 
 import android.content.Intent
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.ImageButton
+import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import com.example.app_lxa1.models.Answer
 import com.example.app_lxa1.models.Question
@@ -30,6 +29,12 @@ class dethi : AppCompatActivity() {
         )
         val dethi1 = findViewById<Button>(R.id.bt_de1)
         val dethi2 = findViewById<Button>(R.id.bt_de2)
+        val dethi3 = findViewById<Button>(R.id.bt_de3)
+        val dethi4 = findViewById<Button>(R.id.bt_de4)
+        val dethi5 = findViewById<Button>(R.id.bt_de5)
+        val dethi6 = findViewById<Button>(R.id.bt_de6)
+        val dethi7 = findViewById<Button>(R.id.bt_de7)
+        val dethi8 = findViewById<Button>(R.id.bt_de8)
 
         dethi1.setOnClickListener{
             var intent = Intent(this,thisathach::class.java)
@@ -37,8 +42,27 @@ class dethi : AppCompatActivity() {
             startActivity(intent)
         }
         dethi2.setOnClickListener{
-//            var intent = Intent(this,thisathach::class.java)
-//            startActivity(intent)
+            var intent = Intent(this,thisathach::class.java)
+            intent.putExtra("mListQuestion", getListQuestionDaThi2())
+            startActivity(intent)
+        }
+        dethi3.setOnClickListener{
+            Toast.makeText(this, "Đề thi đang được thiết lập.\nVui lòng chọn bộ đề khác", Toast.LENGTH_SHORT).show()
+        }
+        dethi4.setOnClickListener{
+            Toast.makeText(this, "Đề thi đang được thiết lập.\nVui lòng chọn bộ đề khác", Toast.LENGTH_SHORT).show()
+        }
+        dethi5.setOnClickListener{
+            Toast.makeText(this, "Đề thi đang được thiết lập.\nVui lòng chọn bộ đề khác", Toast.LENGTH_SHORT).show()
+        }
+        dethi6.setOnClickListener{
+            Toast.makeText(this, "Đề thi đang được thiết lập.\nVui lòng chọn bộ đề khác", Toast.LENGTH_SHORT).show()
+        }
+        dethi7.setOnClickListener{
+            Toast.makeText(this, "Đề thi đang được thiết lập.\nVui lòng chọn bộ đề khác", Toast.LENGTH_SHORT).show()
+        }
+        dethi8.setOnClickListener{
+            Toast.makeText(this, "Đề thi đang được thiết lập.\nVui lòng chọn bộ đề khác", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -165,6 +189,132 @@ class dethi : AppCompatActivity() {
         list.add(Question(18, "Biển nào báo hiệu “Đường giao nhau” của các tuyến đường cùng cấp ?", answerList18,R.drawable.img9))
         list.add(Question(19, "Biển nào chỉ dẫn nơi bắt đầu đoạn đường dành cho người đi bộ ?", answerList19,R.drawable.img10))
         list.add(Question(20, "Biển nào dưới đây báo hiệu hết cấm vượt ?", answerList20,R.drawable.img11))
+
+        return list
+    }
+    private fun getListQuestionDaThi2(): ArrayList<Question>? {
+        val list: ArrayList<Question> = ArrayList()
+        val answerList1: MutableList<Answer> = ArrayList<Answer>()
+        answerList1.add(Answer("Là một phần của phần đường xe chạy được chia theo chiều dọc của đường, sử dụng cho xe chạy.", false))
+        answerList1.add(Answer("Là một phần của phần đường xe chạy được chia theo chiều dọc của đường, có bề rộng đủ cho xe chạy an toàn.", true))
+        answerList1.add(Answer("Là đường cho xe ô tô chạy, dừng, đỗ an toàn.", false))
+        answerList1.add(Answer("", false))
+        val answerList2: MutableList<Answer> = ArrayList<Answer>()
+        answerList2.add(Answer("Người điều khiển, người sử dụng phương tiện tham gia giao thông đường bộ.", false))
+        answerList2.add(Answer("Người điều khiển, dẫn dắt súc vật; người đi bộ trên đường bộ.", false))
+        answerList2.add(Answer("Cả ý 1 và ý 2.", true))
+        answerList2.add(Answer("", false))
+        val answerList3: MutableList<Answer> = ArrayList<Answer>()
+        answerList3.add(Answer("Người điều khiển: Xe ô tô, xe mô tô, xe đạp, xe gắn máy.", true))
+        answerList3.add(Answer("Người ngồi phía sau người điều khiển xe cơ giới.", false))
+        answerList3.add(Answer("Người đi bộ.", false))
+        answerList3.add(Answer("Cả ý 1 và ý 2.", false))
+        val answerList4: MutableList<Answer> = ArrayList<Answer>()
+        answerList4.add(Answer("Được phép.", false))
+        answerList4.add(Answer("Nếu phương tiện được kéo, đẩy có khối lượng nhỏ hơn phương tiện của mình.", false))
+        answerList4.add(Answer("Tuỳ trường hợp.", false))
+        answerList4.add(Answer("Không được vượt.", true))
+        val answerList5: MutableList<Answer> = ArrayList<Answer>()
+        answerList5.add(Answer("Không được vận chuyển.", true))
+        answerList5.add(Answer("Chỉ được vận chuyển khi đã chằng buộc cẩn thận.", false))
+        answerList5.add(Answer("Chỉ được vận chuyển vật cồng kềnh trên xe máy nếu khoảng cách về nhà ngắn hơn 2 km.", false))
+        answerList5.add(Answer("", false))
+        val answerList6: MutableList<Answer> = ArrayList<Answer>()
+        answerList6.add(Answer("Biển báo nguy hiểm.", false))
+        answerList6.add(Answer("Biển báo cấm.", false))
+        answerList6.add(Answer("Biển báo hiệu lệnh phải thi hành.", false))
+        answerList6.add(Answer("Biển báo chỉ dẫn.", true))
+        val answerList7: MutableList<Answer> = ArrayList<Answer>()
+        answerList7.add(Answer("Tăng tốc độ và ra hiệu cho xe sau vượt, không được gây trở ngại cho xe sau vượt.", false))
+        answerList7.add(Answer("Người điều khiển phương tiện phía trước phải giảm tốc độ, đi sát về bên phải của phần đường xe chạy cho đến khi xe sau đã vượt qua, không được gây trở ngại cho xe sau vượt.", true))
+        answerList7.add(Answer("Cho xe tránh về bên trái mình và ra hiệu cho xe sau vượt; nếu có chướng ngại vật phía trước hoặc thiếu điều kiện an toàn chưa cho vượt được phải ra hiệu cho xe sau biết; cấm gây trở ngại cho xe xin vượt.", false))
+        answerList7.add(Answer("", false))
+        val answerList8: MutableList<Answer> = ArrayList<Answer>()
+        answerList8.add(Answer("Khi tham gia giao thông đường bộ.", true))
+        answerList8.add(Answer("Chỉ khi đi trên đường chuyên dùng; đường cao tốc.", false))
+        answerList8.add(Answer("Khi tham gia giao thông trên đường tỉnh lộ hoặc quốc lộ.", false))
+        answerList8.add(Answer("", false))
+        val answerList9: MutableList<Answer> = ArrayList<Answer>()
+        answerList9.add(Answer("Nếu đủ điều kiện an toàn, người lái xe phải giảm tốc độ, đi sát về bên phải của phần đường xe chạy cho đến khi xe sau đã vượt qua, không được gây trở ngại đối với xe xin vượt.", true))
+        answerList9.add(Answer("Lái xe vào lề đường bên trái và giảm tốc độ để xe phía sau vượt qua, không được gây trở ngại đối với xe xin vượt.", false))
+        answerList9.add(Answer("Nếu đủ điều kiện an toàn, người lái xe phải tăng tốc độ, đi sát về bên phải của phần đường xe chạy cho đến khi xe sau đã vượt qua.", false))
+        answerList9.add(Answer("", false))
+        val answerList10: MutableList<Answer> = ArrayList<Answer>()
+        answerList10.add(Answer("Gặp biển báo nguy hiểm trên đường.", true))
+        answerList10.add(Answer("Gặp biển chỉ dẫn trên đường.", false))
+        answerList10.add(Answer("Gặp biển báo hết mọi lệnh cấm.", false))
+        answerList10.add(Answer("Gặp biển báo hết hạn chế tốc độ tối đa cho phép.", false))
+        val answerList11: MutableList<Answer> = ArrayList<Answer>()
+        answerList11.add(Answer("Đường ướt, đường có sỏi cát trên nền đường.", false))
+        answerList11.add(Answer("Đường hẹp có nhiều điểm giao cắt từ hai phía.", false))
+        answerList11.add(Answer("Đường đèo dốc, vòng liên tục.", false))
+        answerList11.add(Answer("Tất cả các ý nêu trên.", true))
+        val answerList12: MutableList<Answer> = ArrayList<Answer>()
+        answerList12.add(Answer("Quan sát biển báo hiệu để biết nơi được phép quay đầu; quan sát kỹ địa hình nơi chọn để quay đầu; lựa chọn quỹ đạo quay đầu xe cho thích hợp; quay đầu xe với tốc độ thấp; thường xuyên báo tín hiệu để người, các phương tiện xung quanh được biết; nếu quay đầu xe ở nơi nguy hiểm thì đưa đầu xe về phía nguy hiểm đưa đuôi xe về phía an toàn.", true))
+        answerList12.add(Answer("Quan sát biển báo hiệu để biết nơi được phép quay đầu; quan sát kỹ địa hình nơi chọn để quay đầu; lựa chọn quỹ đạo quay đầu xe; quay đầu xe với tốc độ tối đa; thường xuyên báo tín hiệu để người, các phương tiện xung quanh được biết; nếu quay đầu xe ở nơi nguy hiểm thì đưa đuôi xe về phía nguy hiểm và đầu xe về phía an toàn.", false))
+        answerList12.add(Answer("", false))
+        answerList12.add(Answer("", false))
+        val answerList13: MutableList<Answer> = ArrayList<Answer>()
+        answerList13.add(Answer("Để quan sát an toàn phía bên trái khi chuẩn bị rẽ trái.", false))
+        answerList13.add(Answer("Để quan sát an toàn phía bên phải khi chuẩn bị rẽ phải.", false))
+        answerList13.add(Answer("Để quan sát an toàn phía sau cả bên trái và bên phải trước khi chuyển hướng.", true))
+        answerList13.add(Answer("Để quan sát an toàn phía trước cả bên trái và bên phải trước khi chuyển hướng.", false))
+        val answerList14: MutableList<Answer> = ArrayList<Answer>()
+        answerList14.add(Answer("Biển 1.", false))
+        answerList14.add(Answer("Biển 2.", false))
+        answerList14.add(Answer("Biển 3", true))
+        answerList14.add(Answer("", false))
+        val answerList15: MutableList<Answer> = ArrayList<Answer>()
+        answerList15.add(Answer("Báo hiệu đường có ổ gà, lồi lõm.", false))
+        answerList15.add(Answer("Báo hiệu đường có gồ giảm tốc phía trước.", true))
+        answerList15.add(Answer("", false))
+        answerList15.add(Answer("", false))
+        val answerList16: MutableList<Answer> = ArrayList<Answer>()
+        answerList16.add(Answer("Biển 1.", false))
+        answerList16.add(Answer("Biển 2.", true))
+        answerList16.add(Answer("Biển 3.", false))
+        answerList16.add(Answer("Cả 3 biển", false))
+        val answerList17: MutableList<Answer> = ArrayList<Answer>()
+        answerList17.add(Answer("Vạch 1", false))
+        answerList17.add(Answer("Vạch 2", false))
+        answerList17.add(Answer("Vạch 3", false))
+        answerList17.add(Answer("Vạch 1 và 3", true))
+        val answerList18: MutableList<Answer> = ArrayList<Answer>()
+        answerList18.add(Answer("Xe con và xe khách.", true))
+        answerList18.add(Answer("Mô tô", false))
+        answerList18.add(Answer("", false))
+        answerList18.add(Answer("", false))
+        val answerList19: MutableList<Answer> = ArrayList<Answer>()
+        answerList19.add(Answer("Xe con", false))
+        answerList19.add(Answer("Xe mô tô", true))
+        answerList19.add(Answer("", false))
+        answerList19.add(Answer("", false))
+        val answerList20: MutableList<Answer> = ArrayList<Answer>()
+        answerList20.add(Answer("Xe công an, xe quân sự, xe con + mô tô.", false))
+        answerList20.add(Answer("Xe quân sự, xe công an, xe con + mô tô.", true))
+        answerList20.add(Answer("Xe mô tô + xe con, xe quân sự, xe công an.", false))
+        answerList20.add(Answer("", false))
+
+        list.add(Question(1, "“Làn đường” là gì ?", answerList1,0))
+        list.add(Question(2, "“Người tham gia giao thông đường bộ” gồm những đối tượng nào ?", answerList2,0))
+        list.add(Question(3, "Theo Luật phòng chống tác hại của rượu, bia, đối tượng nào dưới đây bị cấm sử dụng rượu bia khi tham gia giao thông ?", answerList3,R.drawable.de2_img3))
+        list.add(Question(4, "Người điều khiển xe mô tô hai bánh, ba bánh, xe gắn máy có được phép sử dụng xe để kéo hoặc đẩy các phương tiện khác khi tham gia giao thông không ?", answerList4,R.drawable.de2_img4))
+        list.add(Question(5, "Hành vi vận chuyển đồ vật cồng kềnh bằng xe mô tô, xe gắn máy khi tham gia giao thông có được phép hay không ?", answerList5,R.drawable.de2_img5))
+        list.add(Question(6, "Biển báo hiệu hình chữ nhật hoặc hình vuông hoặc hình mũi tên nền xanh lam là loại biển gì dưới đây ?", answerList6,R.drawable.de2_img6))
+        list.add(Question(7, "Khi điều khiển xe chạy trên đường biết có xe sau xin vượt nếu đủ điều kiện an toàn người lái xe phải làm gì ?", answerList7,0))
+        list.add(Question(8, "Người ngồi trên xe mô tô 2 bánh, xe gắn máy phải đội mũ bảo hiểm có cài quai đúng quy cách khi nào ?", answerList8,R.drawable.de2_img8))
+        list.add(Question(9, "Người lái xe mô tô xử lý như thế nào khi cho xe mô tô phía sau vượt ?", answerList9,0))
+        list.add(Question(10, "Người lái xe phải giảm tốc độ thấp hơn tốc độ tối đa cho phép đến mức cần thiết, chú ý quan sát và chuẩn bị sẵn sàng những tình huống có thế xảy ra để phòng ngừa tai nạn trong các trường hợp nào dưới đây ?", answerList10,0))
+        list.add(Question(11, "Người điều khiển xe mô tô phải giảm tốc độ và hết sức thận trọng khi qua những đoạn đường nào dưới đây ?", answerList11,0))
+        list.add(Question(12, "Khi quay đầu xe, người lái xe cần phải quan sát và thực hiện các thao tác nào để đảm bảo an toàn giao thông ?", answerList12,0))
+        list.add(Question(13, "Gương chiếu hậu của xe mô tô hai bánh, có tác dụng gì trong các trường hợp dưới đây ?", answerList13,0))
+        list.add(Question(14, "Biển nào báo hiệu “Đường đôi” ?", answerList14,R.drawable.de2_img14))
+        list.add(Question(15, "Biển báo này có ý nghĩa gì ?", answerList15,R.drawable.de2_img15))
+        list.add(Question(16, "Trong các biển dưới đây biển nào là biển “Hết mọi lệnh cấm” ?", answerList16,R.drawable.de2_img16))
+        list.add(Question(17, "Vạch kẻ đường nào dưới đây là vạch phân chia hai chiều xe chạy (vạch tim đường) ?", answerList17,R.drawable.de2_img17))
+        list.add(Question(18, "Theo tín hiệu đèn, xe nào được phép đi ?", answerList18,R.drawable.de2_img18))
+        list.add(Question(19, "Xe nào được quyền đi trước trong trường hợp này ?", answerList19,R.drawable.de2_img19))
+        list.add(Question(20, "Trong trường hợp này, thứ tự xe đi như thế nào là đúng quy tắc giao thông ?", answerList20,R.drawable.de2_img20))
 
         return list
     }

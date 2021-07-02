@@ -2,6 +2,10 @@ package com.example.app_lxa1
 
 import android.content.Intent
 import android.graphics.Color
+import android.media.AudioAttributes
+import android.media.AudioManager
+import android.media.SoundPool
+import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.os.Handler
@@ -28,10 +32,29 @@ class thisathach : AppCompatActivity() ,View.OnClickListener{
     private var currentQuetion = 0
     private var tv_time:TextView? = null
     private var list: ArrayList<Int> = ArrayList()
+    private var soundPool: SoundPool? = null
+    private var sound1 = 0
+    private var sound2 = 0
+    private var sound3 = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_thisathach)
+        soundPool = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            val audioAttributes = AudioAttributes.Builder()
+                .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
+                .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                .build()
+            SoundPool.Builder()
+                .setMaxStreams(6)
+                .setAudioAttributes(audioAttributes)
+                .build()
+        } else {
+            SoundPool(6, AudioManager.STREAM_MUSIC, 0)
+        }
+        sound1 = soundPool!!.load(this, R.raw.win, 1)
+        sound2 = soundPool!!.load(this, R.raw.loss, 1)
+        sound3 = soundPool!!.load(this, R.raw.ping2, 1)
         for (i in 0..19) {
             list.add(-1)
         }
@@ -41,9 +64,7 @@ class thisathach : AppCompatActivity() ,View.OnClickListener{
         var ListQuestion: ArrayList<Question> = ArrayList()
         ListQuestion = getIntent().getSerializableExtra("mListQuestion") as ArrayList<Question>
         mListQuestion = ListQuestion
-        if (mListQuestion!!.isEmpty()) {
-            return
-        }
+
         setDataQuestion(mListQuestion!![currentQuetion])
         val bt_prev = findViewById<Button>(R.id.bt_Truoc)
         val bt_next = findViewById<Button>(R.id.bt_Sau)
@@ -121,7 +142,6 @@ class thisathach : AppCompatActivity() ,View.OnClickListener{
         else if(tvAnswer3!!.isChecked==true) list.set(currentQuetion,2)
         else if(tvAnswer4!!.isChecked==true) list.set(currentQuetion,3)
         var score:Int = 0
-
         for(i in 0..19)
         {
             try {
@@ -130,7 +150,8 @@ class thisathach : AppCompatActivity() ,View.OnClickListener{
 
             }
         }
-
+        if(score>=16) soundPool!!.play(sound1, 1f, 1f, 0, 0, 1f)
+        else soundPool!!.play(sound2, 1f, 1f, 0, 0, 1f)
         intent.putExtra("score",score.toString())
         intent.putExtra("tvTime",tv_time!!.text)
         intent.putIntegerArrayListExtra("list",list)
@@ -290,7 +311,8 @@ class thisathach : AppCompatActivity() ,View.OnClickListener{
 
                 }
             }
-
+            if(score>=16) soundPool!!.play(sound1, 1f, 1f, 0, 0, 1f)
+            else soundPool!!.play(sound2, 1f, 1f, 0, 0, 1f)
             intent.putExtra("score",score.toString())
             intent.putExtra("tvTime",tv_time!!.text)
             intent.putIntegerArrayListExtra("list",list)
