@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.app_lxa1">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,13 +11,12 @@
         android:theme="@style/Theme.APP_LXA1">
         <activity android:name=".xemlaiketqua"></activity>
         <activity android:name=".lythuyet" />
+        <activity android:name=".tracuu" />
         <activity android:name=".dethi" />
         <activity android:name=".ketquathi" />
-        <activity android:name=".thisathach2" />
         <activity android:name=".thisathach" />
         <activity android:name=".meoghinho" />
         <activity android:name=".bienbaogt" />
-        <activity android:name=".bienbao" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

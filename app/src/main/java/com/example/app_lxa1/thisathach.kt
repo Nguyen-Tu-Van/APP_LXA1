@@ -108,10 +108,37 @@ class thisathach : AppCompatActivity() ,View.OnClickListener{
             }
 
             override fun onFinish() {
-                tv_time!!.setText("done!")
+                tv_time!!.setText("Hết giờ!")
+                ketthuc()
             }
         }.start()
     }
+    fun ketthuc()
+    {
+        var intent = Intent(this,ketquathi::class.java)
+        if(tvAnswer1!!.isChecked==true) list.set(currentQuetion,0)
+        else if(tvAnswer2!!.isChecked==true) list.set(currentQuetion,1)
+        else if(tvAnswer3!!.isChecked==true) list.set(currentQuetion,2)
+        else if(tvAnswer4!!.isChecked==true) list.set(currentQuetion,3)
+        var score:Int = 0
+
+        for(i in 0..19)
+        {
+            try {
+                if (mListQuestion!![i].getListAnswer()[list.get(i)].isCorrect == true) score++
+            } catch (e: Exception) {
+
+            }
+        }
+
+        intent.putExtra("score",score.toString())
+        intent.putExtra("tvTime",tv_time!!.text)
+        intent.putIntegerArrayListExtra("list",list)
+        intent.putExtra("mListQuestion", mListQuestion)
+
+        startActivity(intent)
+    }
+
     fun back_thi()
     {
         val toolbar: Toolbar = findViewById<View>(R.id.toolbarThi) as Toolbar

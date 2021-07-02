@@ -31,6 +31,9 @@ class ketquathi : AppCompatActivity() {
 
         thilai.setOnClickListener {
             var intent = Intent(this,thisathach::class.java)
+            var ListQuestion: ArrayList<Question> = ArrayList()
+            ListQuestion = getIntent().getSerializableExtra("mListQuestion") as ArrayList<Question>
+            intent.putExtra("mListQuestion", ListQuestion)
             startActivity(intent)
         }
         quayve.setOnClickListener {

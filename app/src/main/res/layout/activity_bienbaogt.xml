@@ -29,50 +29,75 @@
                 />
         </androidx.appcompat.widget.Toolbar>
 
-
-        <LinearLayout
+        <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
-                android:layout_weight="1"
-                android:backgroundTint="#CEB6B9"
-                android:text="Biển báo         cấm"
-                android:textAllCaps="false"
-                android:textColor="#D6716E"
-
-                android:textSize="15sp" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-
-
-                android:layout_weight="1"
-                android:backgroundTint="#CEB6B9"
-                android:text="Biển báo nguy hiểm"
-                android:textAllCaps="false"
-                android:textColor="#D6716E"
-                android:textSize="15sp" />
-
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-
-                android:layout_weight="1"
-                android:backgroundTint="#C2DADE"
-                android:text="Biển báo hiệu lệnh"
-                android:textAllCaps="false"
-                android:textColor="#71BCBE"
-                android:textSize="15sp" />
-        </LinearLayout>
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/bt_bienbao1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ff0000"
+                    android:text="Biển báo cấm"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+                <Button
+                    android:id="@+id/bt_bienbao2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#cc0099"
+                    android:text="Biển báo nguy hiểm"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+                <Button
+                    android:id="@+id/bt_bienbao3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ff751a"
+                    android:text="Biển báo hiệu lệnh"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+                <Button
+                    android:id="@+id/bt_bienbao4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#0066ff"
+                    android:text="Biển báo chỉ dẫn"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+                <Button
+                    android:id="@+id/bt_bienbao5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#cc33ff"
+                    android:text="Biển báo phụ"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+                <Button
+                    android:id="@+id/bt_bienbao6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#75a3a3"
+                    android:text="Vạch kẻ đường"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </HorizontalScrollView>
 
         <LinearLayout
             android:layout_width="match_parent"

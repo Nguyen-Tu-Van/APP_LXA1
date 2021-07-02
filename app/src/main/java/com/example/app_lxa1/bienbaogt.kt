@@ -37,6 +37,12 @@ class bienbaogt : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bienbaogt)
 
+        val bt_cam = findViewById<Button>(R.id.bt_bienbao1)
+        val bt_nguyhiem = findViewById<Button>(R.id.bt_bienbao2)
+        val bt_hieulenh = findViewById<Button>(R.id.bt_bienbao3)
+        val bt_chidan = findViewById<Button>(R.id.bt_bienbao4)
+        val bt_phu = findViewById<Button>(R.id.bt_bienbao5)
+        val bt_vachke = findViewById<Button>(R.id.bt_bienbao6)
         val toolbar: Toolbar = findViewById<View>(R.id.toolbarBienBao) as Toolbar
         setSupportActionBar(toolbar)
         if (supportActionBar != null) {
@@ -49,28 +55,57 @@ class bienbaogt : AppCompatActivity() {
         )
 
         listView = findViewById(R.id.listView2)
-        val adapter: MyAdapter = MyAdapter(this, mTitle, mDescription, images)
+        var adapter: MyAdapter = MyAdapter(this, mTitle, mDescription, images)
         listView!!.adapter = adapter
 
-        //
-        listView!!.onItemClickListener =
-            AdapterView.OnItemClickListener { parent, view, position, id ->
-                if (position == 0) {
-                    Toast.makeText(this, "Ad", Toast.LENGTH_SHORT).show()
-                }
-                if (position == 1) {
-                    Toast.makeText(this, "Bd", Toast.LENGTH_SHORT).show()
-                }
-                if (position == 2) {
-                    Toast.makeText(this, "Cd", Toast.LENGTH_SHORT).show()
-                }
-                if (position == 3) {
-                    Toast.makeText(this, "Ed", Toast.LENGTH_SHORT).show()
-                }
-                if (position == 4) {
-                    Toast.makeText(this, "Fd", Toast.LENGTH_SHORT).show()
-                }
-            }
+        bt_cam.setOnClickListener {
+            adapter = MyAdapter(this, mTitle, mDescription, images)
+            listView!!.adapter = adapter
+            Toast.makeText(this, "Biển báo cấm", Toast.LENGTH_SHORT).show()
+        }
+        bt_nguyhiem.setOnClickListener {
+            adapter = MyAdapter(this, mTitle, mDescription, images)
+            listView!!.adapter = adapter
+            Toast.makeText(this, "Biển báo nguy hiểm", Toast.LENGTH_SHORT).show()
+        }
+        bt_hieulenh.setOnClickListener {
+            adapter = MyAdapter(this, mTitle, mDescription, images)
+            listView!!.adapter = adapter
+            Toast.makeText(this, "Biển báo hiệu lệnh", Toast.LENGTH_SHORT).show()
+        }
+        bt_chidan.setOnClickListener {
+            adapter = MyAdapter(this, mTitle, mDescription, images)
+            listView!!.adapter = adapter
+            Toast.makeText(this, "Biển bảo chỉ dẫn", Toast.LENGTH_SHORT).show()
+        }
+        bt_phu.setOnClickListener {
+            adapter = MyAdapter(this, mTitle, mDescription, images)
+            listView!!.adapter = adapter
+            Toast.makeText(this, "Biển báo phụ", Toast.LENGTH_SHORT).show()
+        }
+        bt_vachke.setOnClickListener {
+            adapter = MyAdapter(this, mTitle, mDescription, images)
+            listView!!.adapter = adapter
+            Toast.makeText(this, "Vạch kẻ đường", Toast.LENGTH_SHORT).show()
+        }
+//        listView!!.onItemClickListener =
+//            AdapterView.OnItemClickListener { parent, view, position, id ->
+//                if (position == 0) {
+//                    Toast.makeText(this, "Ad", Toast.LENGTH_SHORT).show()
+//                }
+//                if (position == 1) {
+//                    Toast.makeText(this, "Bd", Toast.LENGTH_SHORT).show()
+//                }
+//                if (position == 2) {
+//                    Toast.makeText(this, "Cd", Toast.LENGTH_SHORT).show()
+//                }
+//                if (position == 3) {
+//                    Toast.makeText(this, "Ed", Toast.LENGTH_SHORT).show()
+//                }
+//                if (position == 4) {
+//                    Toast.makeText(this, "Fd", Toast.LENGTH_SHORT).show()
+//                }
+//            }
     }
         internal inner class MyAdapter(
             context1: Context,

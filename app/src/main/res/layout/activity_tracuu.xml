@@ -19,7 +19,7 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             >
             <TextView
-                android:id="@+id/textview1"
+                android:id="@+id/textviewTraCuu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Tra cứu luật nhanh"
@@ -29,49 +29,78 @@
                 />
         </androidx.appcompat.widget.Toolbar>
 
-
-        <LinearLayout
+        <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/bt_traCuu1"
-                android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="#CEB6B9"
-                android:text="Ô tô"
-                android:gravity="center"
-                android:textAllCaps="false"
-                android:textColor="#D6716E"
+                android:orientation="horizontal">
 
-                android:textSize="15sp" />
+                <Button
+                    android:id="@+id/bt_traCuu1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#0066ff"
+                    android:text="Xe máy"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+                <Button
+                    android:id="@+id/bt_traCuu2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00ffff"
+                    android:text="Ô tô"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+                <Button
+                    android:id="@+id/bt_traCuu3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ff751a"
+                    android:text="Máy kéo"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+                <Button
+                    android:id="@+id/bt_traCuu4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#aaff00"
+                    android:text="Xe thô sơ"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+                <Button
+                    android:id="@+id/bt_traCuu5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#cc33ff"
+                    android:text="Người đi bộ"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+                <Button
+                    android:id="@+id/bt_traCuu6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#75a3a3"
+                    android:text="Động vật"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
 
-            <Button
-                android:id="@+id/bt_traCuu2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="#CEB6B9"
-                android:text="Xe máy"
-                android:gravity="center"
-                android:textAllCaps="false"
-                android:textColor="#D6716E"
-                android:textSize="15sp" />
+            </LinearLayout>
+        </HorizontalScrollView>
 
-            <Button
-                android:id="@+id/bt_traCuu3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="#C2DADE"
-                android:text="Máy kéo"
-                android:gravity="center"
-                android:textAllCaps="false"
-                android:textColor="#71BCBE"
-                android:textSize="15sp" />
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

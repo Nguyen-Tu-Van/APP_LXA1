@@ -19,7 +19,7 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             >
             <TextView
-                android:id="@+id/textview1"
+                android:id="@+id/textviewMeo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Mẹo ghi nhớ"
@@ -29,46 +29,36 @@
                 />
         </androidx.appcompat.widget.Toolbar>
 
-
-        <LinearLayout
+        <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/bt_meo1"
-                android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="#CEB6B9"
-                android:text="Mẹo cậu hỏi lý thuyết"
-                android:textAllCaps="false"
-                android:textColor="#D6716E"
+                android:orientation="horizontal">
 
-                android:textSize="15sp" />
+                <Button
+                    android:id="@+id/bt_meo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ff9933"
+                    android:text="Mẹo câu hỏi lý thuyết"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-            <Button
-                android:id="@+id/bt_meo2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="#CEB6B9"
-                android:text="Mẹo câu hỏi biển báo"
-                android:textAllCaps="false"
-                android:textColor="#D6716E"
-                android:textSize="15sp" />
+                <Button
+                    android:id="@+id/bt_meo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ff9933"
+                    android:text="Mẹo câu hỏi thực hành"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-            <Button
-                android:id="@+id/bt_meo3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="#C2DADE"
-                android:text="Mẹo câu hỏi sa huỳnh"
-                android:textAllCaps="false"
-                android:textColor="#71BCBE"
-                android:textSize="15sp" />
-        </LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -83,6 +73,7 @@
 
             </ListView>
         </LinearLayout>
+
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
